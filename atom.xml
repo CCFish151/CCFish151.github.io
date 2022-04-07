@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>CCFishのHome</title>
+  <title>CCFish</title>
   
-  <subtitle>点这儿可以返回哦~</subtitle>
+  <subtitle>I gonna chasing my dream</subtitle>
   <link href="http://fish151.cc/atom.xml" rel="self"/>
   
   <link href="http://fish151.cc/"/>
