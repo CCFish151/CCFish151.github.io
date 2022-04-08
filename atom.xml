@@ -6,7 +6,7 @@
   <link href="http://fish151.cc/atom.xml" rel="self"/>
   
   <link href="http://fish151.cc/"/>
-  <updated>2022-04-06T16:40:01.887Z</updated>
+  <updated>2022-04-08T06:13:37.586Z</updated>
   <id>http://fish151.cc/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>USE SELECT</title>
+    <link href="http://fish151.cc/2022/04/08/use-select/"/>
+    <id>http://fish151.cc/2022/04/08/use-select/</id>
+    <published>2022-04-08T03:45:34.000Z</published>
+    <updated>2022-04-08T06:13:37.586Z</updated>
+    
+    <content type="html"><![CDATA[<p>​       在SQL语句中，可以说最重要的便是<code>SELECT</code>语句，它不仅让我们可以查看数据库中的数据，更重要的是它提供给了我们处理数据的接口，使得一些复杂过程得以实现。</p><p>​       本文将对<code>SELECT</code>语句的相关用法作出简单梳理，希望能有所帮助。</p><h2 id="select的简单用法"><a href="#select的简单用法" class="headerlink" title="select的简单用法"></a>select的简单用法</h2><h3 id="单表查询"><a href="#单表查询" class="headerlink" title="单表查询"></a>单表查询</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> SEX <span class="hljs-keyword">FROM</span> HANBAODB <span class="hljs-keyword">WHERE</span> NAME <span class="hljs-operator">=</span> &quot;MAZIZHEN&quot;;<br>#从hanbaodb中查询出mazizhen的性别<br></code></pre></td></tr></table></figure><h3 id="多表联结查询"><a href="#多表联结查询" class="headerlink" title="多表联结查询"></a>多表联结查询</h3><h2 id="select的略微复杂应用"><a href="#select的略微复杂应用" class="headerlink" title="select的略微复杂应用"></a>select的略微复杂应用</h2><h3 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h3><h3 id="select修改表数据"><a href="#select修改表数据" class="headerlink" title="select修改表数据"></a>select修改表数据</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;​       在SQL语句中，可以说最重要的便是&lt;code&gt;SELECT&lt;/code&gt;语句，它不仅让我们可以查看数据库中的数据，更重要的是它提供给了我们处理数据的接口，使得一些复杂过程得以实现。&lt;/p&gt;
+&lt;p&gt;​       本文将对&lt;code&gt;SELECT&lt;/code&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="mysql" scheme="http://fish151.cc/tags/mysql/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
