@@ -4,7 +4,7 @@
   <url>
     <loc>http://fish151.cc/2022/04/08/use-select/</loc>
     
-    <lastmod>2022-04-08</lastmod>
+    <lastmod>2022-04-25</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,19 +31,26 @@
 
   <url>
     <loc>http://fish151.cc/</loc>
-    <lastmod>2022-04-08</lastmod>
+    <lastmod>2022-04-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>http://fish151.cc/tags/mysql/</loc>
-    <lastmod>2022-04-08</lastmod>
+    <loc>http://fish151.cc/tags/MySQL/</loc>
+    <lastmod>2022-04-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
 
+  
+  <url>
+    <loc>http://fish151.cc/categories/Tech/</loc>
+    <lastmod>2022-04-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>
