@@ -1,4 +1,4 @@
-http://fish151.cc/2022/04/08/use-select/
+http://fish151.cc/2022/04/08/mysql/use_select/
 http://fish151.cc/about/index.html
 http://fish151.cc/2022/04/07/hello-world/
 http://fish151.cc/
