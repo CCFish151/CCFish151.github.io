@@ -4,3 +4,4 @@ http://fish151.cc/about/index.html
 http://fish151.cc/
 http://fish151.cc/tags/MySQL/
 http://fish151.cc/categories/Tech/
+http://fish151.cc/categories/Tech/MySQL/

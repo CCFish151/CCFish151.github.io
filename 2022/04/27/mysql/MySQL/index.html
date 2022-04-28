@@ -16,21 +16,20 @@
   <meta name="author" content="Fish">
   <meta name="keywords" content="">
   
-    <meta name="description" content="&#x3D;&#x3D;STATUS: INCOMPLETE&#x3D;&#x3D;一直都有想过给数据库的学习做一点点总结，写一点什么，比如简单语句指南或者称之为使用手册也未尝不可的东西。正好最近数据库课程结课，在为期末做准备了，也似乎就有了那么一些理由来坚持写一点什么，斗胆也把我在学习数据库过程中的一些心得体会，以及总结的算是框架的东西，来和大家分享一下。  提前声明一下 使用教材为：《MySQ">
+    <meta name="description" content="STATUS: INCOMPLETE一直都有想过给数据库的学习做一点点总结，写一点什么，比如简单语句指南或者称之为使用手册也未尝不可的东西。正好最近数据库课程结课，在为期末做准备了，也似乎就有了那么一些理由来坚持写一点什么，斗胆也把我在学习数据库过程中的一些心得体会，以及总结的算是框架的东西，来和大家分享一下。  提前声明一下 使用教材为：《MySQL实用教材（第4版）》 在我看来这本书其实还不错">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL从入门到入土">
+<meta property="og:title" content="A Simple Introduction to MySQL">
 <meta property="og:url" content="http://fish151.cc/2022/04/27/mysql/MySQL/index.html">
 <meta property="og:site_name" content="CCFish">
-<meta property="og:description" content="&#x3D;&#x3D;STATUS: INCOMPLETE&#x3D;&#x3D;一直都有想过给数据库的学习做一点点总结，写一点什么，比如简单语句指南或者称之为使用手册也未尝不可的东西。正好最近数据库课程结课，在为期末做准备了，也似乎就有了那么一些理由来坚持写一点什么，斗胆也把我在学习数据库过程中的一些心得体会，以及总结的算是框架的东西，来和大家分享一下。  提前声明一下 使用教材为：《MySQ">
+<meta property="og:description" content="STATUS: INCOMPLETE一直都有想过给数据库的学习做一点点总结，写一点什么，比如简单语句指南或者称之为使用手册也未尝不可的东西。正好最近数据库课程结课，在为期末做准备了，也似乎就有了那么一些理由来坚持写一点什么，斗胆也把我在学习数据库过程中的一些心得体会，以及总结的算是框架的东西，来和大家分享一下。  提前声明一下 使用教材为：《MySQL实用教材（第4版）》 在我看来这本书其实还不错">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-27T03:00:00.000Z">
-<meta property="article:modified_time" content="2022-04-28T08:21:03.763Z">
+<meta property="article:modified_time" content="2022-04-28T12:05:20.995Z">
 <meta property="article:author" content="Fish">
-<meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>MySQL从入门到入土 - CCFish</title>
+  <title>A Simple Introduction to MySQL - CCFish</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -188,7 +187,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="MySQL从入门到入土"></span>
+            <span id="subtitle" data-typed-text="A Simple Introduction to MySQL"></span>
           
         </div>
 
@@ -211,7 +210,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.1k 字
+          3.3k 字
         
       </span>
     
@@ -222,7 +221,7 @@
         
         
         
-          27 分钟
+          42 分钟
         
       </span>
     
@@ -260,25 +259,27 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">MySQL从入门到入土</h1>
+            <h1 style="display: none">A Simple Introduction to MySQL</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：3 小时前
+                    本文最后更新于：几秒前
                   
                 
               </p>
             
             <div class="markdown-body">
               
-              <h1 id="x3D-x3D-STATUS-INCOMPLETE-x3D-x3D"><a href="#x3D-x3D-STATUS-INCOMPLETE-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;STATUS: INCOMPLETE&#x3D;&#x3D;"></a>&#x3D;&#x3D;STATUS: INCOMPLETE&#x3D;&#x3D;</h1><p>一直都有想过给数据库的学习做一点点总结，写一点什么，比如简单语句指南或者称之为使用手册也未尝不可的东西。正好最近数据库课程结课，在为期末做准备了，也似乎就有了那么一些理由来坚持写一点什么，斗胆也把我在学习数据库过程中的一些心得体会，以及总结的算是框架的东西，来和大家分享一下。</p>
+              <h1 id="STATUS-INCOMPLETE"><a href="#STATUS-INCOMPLETE" class="headerlink" title="STATUS: INCOMPLETE"></a>STATUS: INCOMPLETE</h1><p>一直都有想过给数据库的学习做一点点总结，写一点什么，比如简单语句指南或者称之为使用手册也未尝不可的东西。正好最近数据库课程结课，在为期末做准备了，也似乎就有了那么一些理由来坚持写一点什么，斗胆也把我在学习数据库过程中的一些心得体会，以及总结的算是框架的东西，来和大家分享一下。</p>
 <blockquote>
 <p>提前声明一下</p>
 <p>使用教材为：《MySQL实用教材（第4版）》</p>
 <p>在我看来这本书其实还不错，起码作为一本入门的书，还是值得一读的。</p>
+<p>另外，所有大写的代码表明仅为语法讲解，小写代码为示例，请注意！</p>
 </blockquote>
-<p>你可以从右边的目录直接跳转到感兴趣的内容，而我当然是从头到尾梳理。那么我们下面就直接开始了！</p>
+<p><em>你可以从右边的目录直接跳转到感兴趣的内容，而我当然是从头到尾梳理。</em></p>
+<p>那么我们下面就直接开始了！</p>
 <h2 id="数据库原理"><a href="#数据库原理" class="headerlink" title="数据库原理"></a>数据库原理</h2><h2 id="数据库结构设计"><a href="#数据库结构设计" class="headerlink" title="数据库结构设计"></a>数据库结构设计</h2><h2 id="表记录操作"><a href="#表记录操作" class="headerlink" title="表记录操作"></a>表记录操作</h2><h2 id="事务管理"><a href="#事务管理" class="headerlink" title="事务管理"></a>事务管理</h2><h2 id="存储过程和存储函数"><a href="#存储过程和存储函数" class="headerlink" title="存储过程和存储函数"></a>存储过程和存储函数</h2><h2 id="触发器和事件"><a href="#触发器和事件" class="headerlink" title="触发器和事件"></a>触发器和事件</h2><h2 id="用户权限管理"><a href="#用户权限管理" class="headerlink" title="用户权限管理"></a>用户权限管理</h2><p>由于root用户，或者称为管理员为超级用户，具有对数据库的所有权限，而在实际的应用中，为了提高数据库系统的安全性，不可能让所有的访问者都拥有这样的权限，对数据库内容随意进行修改。因此需要创建多个具有不同权限的用户来进行访问控制和管理。例如，我们经常使用的QQ中，群主具有对群的所有权限，管理员具有部分权限，而一般的群友的权限就比较少了。</p>
 <p>我们的用户权限管理也是这样的。</p>
 <h3 id="用户管理操作"><a href="#用户管理操作" class="headerlink" title="用户管理操作"></a>用户管理操作</h3><h4 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h4><p>要管理用户，首先我们得有用户，在MySQL中，我们通过以下命令来新建一个用户：</p>
@@ -293,11 +294,11 @@
 <p>之后可使用<code>select</code>语句从user表中查看当前存在的用户。</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> <span class="hljs-keyword">user</span>;<br></code></pre></td></tr></table></figure>
 
-<h4 id="修改用户名和密码"><a href="#修改用户名和密码" class="headerlink" title="修改用户名和密码"></a>修改用户名和密码</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql">rename <span class="hljs-keyword">user</span> 用户名@主机名 <span class="hljs-keyword">to</span> 新用户名@主机名,        ##修改用户名<br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">user</span> 用户名@主机名 identified <span class="hljs-keyword">by</span> 新密码;      ##修改用户登录密码<br></code></pre></td></tr></table></figure>
+<h4 id="修改用户名和密码"><a href="#修改用户名和密码" class="headerlink" title="修改用户名和密码"></a>修改用户名和密码</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql">RENAME <span class="hljs-keyword">USER</span> 用户名@主机名 <span class="hljs-keyword">TO</span> 新用户名@主机名,        ##修改用户名<br><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">USER</span> 用户名@主机名 IDENTIFIED <span class="hljs-keyword">BY</span> 新密码;      ##修改用户登录密码<br></code></pre></td></tr></table></figure>
 
 <p>非常好理解。</p>
 <h4 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h4><p>当不再需要某个用户时，可以通过</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">drop</span> <span class="hljs-keyword">user</span> 用户名@主机名, <br></code></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">USER</span> 用户名@主机名, ...<br></code></pre></td></tr></table></figure>
 
 <p>来将其删除。该语句可以删除一个或者多个用户，但不会删除被删用户之前创建的的表、索引或视图等，这些对象将继续保留。</p>
 <h4 id="登录用户"><a href="#登录用户" class="headerlink" title="登录用户"></a>登录用户</h4><p>用户已经创建好了，那么我们怎么登陆呢？当只有mysql环境时，这一点书上的描述并不是很清楚，下面我提供两种方法：</p>
@@ -323,9 +324,27 @@
 <h4 id="权限转移和限制"><a href="#权限转移和限制" class="headerlink" title="权限转移和限制"></a>权限转移和限制</h4><p>这一操作也是在权限授予的语句中完成的，即通过 GRANT 语句中的 WITH 子句来实现的。</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">GRANT</span> permission_type<br>	<span class="hljs-keyword">ON</span> ...<br>	<span class="hljs-keyword">TO</span> ...<br>	<span class="hljs-keyword">WITH</span> <span class="hljs-keyword">GRANT</span> OPTION <span class="hljs-operator">|</span> <span class="hljs-keyword">WITH</span> CONSTRAIN;<br></code></pre></td></tr></table></figure>
 
+<p>WITH 子句有两个选项，下面我们分开来讲：</p>
+<p><code>WITH GRANT OPTION</code> 选项表示 TO 子句中指定的所有用户都能够将自己拥有的权限授予其他用户。</p>
+<p><code>WITH 使用限制</code> 中的 <code>使用限制</code> 通过对一些使用次数进行限制来对用户限制，例如限制用户每小时访问次数等。</p>
+<h4 id="权限撤销"><a href="#权限撤销" class="headerlink" title="权限撤销"></a>权限撤销</h4><p>假如我们只是想将某个用户权限撤销，而不想将该用户删除，就好比撤销管理员职位，但是并不踢出群聊，我们就可以使用 REVOKE 语句来实现。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">REVOKE</span> 权限类型[(列表)], ... <br>	<span class="hljs-keyword">ON</span> &#123;dbname&#125;.&#123;tablename&#125;<br>	<span class="hljs-keyword">FROM</span> 用户名@主机名, ...<br></code></pre></td></tr></table></figure>
 
+<p>或者</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">REVOKE</span> <span class="hljs-keyword">ALL</span> PRIVILEGES, <span class="hljs-keyword">GRANT</span> OPTION <span class="hljs-keyword">FROM</span> 用户名@主机名, ...<br></code></pre></td></tr></table></figure>
 
-<h3 id="通过角色进行权限管理"><a href="#通过角色进行权限管理" class="headerlink" title="通过角色进行权限管理"></a>通过角色进行权限管理</h3>
+<p>第一种格式用于撤销指定的权限，而第二种格式会直接撤销该用户所有的权限（包括 WITH 子句中的授权）。</p>
+<h3 id="通过角色进行权限管理"><a href="#通过角色进行权限管理" class="headerlink" title="通过角色进行权限管理"></a>通过角色进行权限管理</h3><p>那么我们现在就已经熟悉了基本的用户管理操作了，也已经学会了从创建用户到销毁用户的全流程（bushi）。自然而然地就会产生一种疑问，当我需要对大量的用户进行批量授权时，难道只能一个接一个把权限给他们吗？</p>
+<p>答案当然是，不是这样的。MySQL中提供了通过标签化的方式来授予权限，不过在这里被称为 <strong>角色(role)</strong> 。</p>
+<p>角色是一组权限的集合，将角色赋予某个用户，那么该用户就具有该角色对应的权限。</p>
+<p>常用的创建角色和分配权限的语句如下</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">DROP</span> ROLE IF <span class="hljs-keyword">EXISTS</span> 角色名       ## 删除角色<br><span class="hljs-keyword">CREATE</span> ROLE 角色名, ...          ## 创建角色<br><span class="hljs-keyword">GRANT</span> 权限名 <span class="hljs-keyword">ON</span> <span class="hljs-operator">*</span>.<span class="hljs-operator">*</span> <span class="hljs-keyword">TO</span> 角色名     ## 为角色分配权限<br><span class="hljs-keyword">GRANT</span> 角色名 <span class="hljs-keyword">ON</span> <span class="hljs-operator">*</span>.<span class="hljs-operator">*</span> <span class="hljs-keyword">TO</span> 用户      ## 为某个用户赋予角色的权限<br># 启用角色。注意，设置角色后如果不启用，用户将仍旧得不到授权<br><span class="hljs-keyword">SET</span> <span class="hljs-keyword">DEFAULT</span> ROLE <span class="hljs-keyword">TO</span> 用户<br><span class="hljs-keyword">SET</span> <span class="hljs-keyword">DEFAULT</span> ROLE <span class="hljs-keyword">ALL</span> <span class="hljs-keyword">TO</span> 用户     ## 当一个用户具有多个角色时使用<br># 撤销角色权限，注意是角色权限哦<br><span class="hljs-keyword">REVOKE</span> ... <span class="hljs-keyword">ON</span> <span class="hljs-operator">*</span>.<span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> 角色名<br></code></pre></td></tr></table></figure>
+
+<p>例如，我们可以通过以下代码，将角色 <code>db_read</code> 赋予用户 <code>user_1@localhost</code> ：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs sql"># <span class="hljs-keyword">create</span> role <span class="hljs-keyword">and</span> authorizing<br><span class="hljs-keyword">drop</span> role if <span class="hljs-keyword">exists</span> db_read;<br><span class="hljs-keyword">create</span> role db_read;<br><span class="hljs-keyword">grant</span> <span class="hljs-keyword">select</span> <span class="hljs-keyword">on</span> <span class="hljs-operator">*</span>.<span class="hljs-operator">*</span> <span class="hljs-keyword">to</span> db_read;<br># <span class="hljs-keyword">create</span> <span class="hljs-keyword">user</span><br><span class="hljs-keyword">drop</span> <span class="hljs-keyword">user</span> if <span class="hljs-keyword">exists</span> user_1<span class="hljs-variable">@localhost</span>;<br><span class="hljs-keyword">create</span> <span class="hljs-keyword">user</span> user_1<span class="hljs-variable">@localhost</span> <br>	identified <span class="hljs-keyword">by</span> <span class="hljs-string">&#x27;1234&#x27;</span>;<br># authorizing<br><span class="hljs-keyword">grant</span> db_read <span class="hljs-keyword">to</span> user_1<span class="hljs-variable">@localhost</span>;<br><span class="hljs-keyword">set</span> <span class="hljs-keyword">default</span> role <span class="hljs-keyword">to</span> user_1<span class="hljs-variable">@localhost</span>;<br></code></pre></td></tr></table></figure>
+
+<p>最后提醒，这里只是示例，在进行具体操作时，建议对角色和用户的命名都要遵守一定的规范。</p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2>
               
             </div>
             <hr/>
@@ -345,6 +364,13 @@
   <a href="/categories/Tech/" class="category-chain-item">Tech</a>
   
   
+    <span>></span>
+    
+  <a href="/categories/Tech/MySQL/" class="category-chain-item">MySQL</a>
+  
+  
+
+  
 
       </span>
     
@@ -354,13 +380,6 @@
     </div>
   
   
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/MySQL/">#MySQL</a>
-      
-    </div>
-  
 </div>
 
 
@@ -369,7 +388,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>MySQL从入门到入土</div>
+      <div>A Simple Introduction to MySQL</div>
       <div>http://fish151.cc/2022/04/27/mysql/MySQL/</div>
     </div>
     <div class="license-meta">
