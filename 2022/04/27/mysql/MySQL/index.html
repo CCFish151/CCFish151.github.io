@@ -23,10 +23,12 @@
 <meta property="og:site_name" content="CCFish">
 <meta property="og:description" content="STATUS: INCOMPLETE一直都有想过给数据库的学习做一点点总结，写一点什么，比如简单语句指南或者称之为使用手册也未尝不可的东西。正好最近数据库课程结课，在为期末做准备了，也似乎就有了那么一些理由来坚持写一点什么，斗胆也把我在学习数据库过程中的一些心得体会，以及总结的算是框架的东西，来和大家分享一下。  提前声明一下 使用教材为：《MySQL实用教材（第4版）》 在我看来这本书其实还不错">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://fish151.cc/MySQL.assets/DB_structure.png">
 <meta property="article:published_time" content="2022-04-27T03:00:00.000Z">
-<meta property="article:modified_time" content="2022-04-28T12:07:20.730Z">
+<meta property="article:modified_time" content="2022-04-28T12:45:51.291Z">
 <meta property="article:author" content="Fish">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://fish151.cc/MySQL.assets/DB_structure.png">
   
   
   <title>A Simple Introduction to MySQL - CCFish</title>
@@ -210,7 +212,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.3k 字
+          3.7k 字
         
       </span>
     
@@ -221,7 +223,7 @@
         
         
         
-          9 分钟
+          10 分钟
         
       </span>
     
@@ -264,7 +266,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：7 分钟前
+                    本文最后更新于：2 分钟前
                   
                 
               </p>
@@ -280,7 +282,14 @@
 </blockquote>
 <p><em>你可以从右边的目录直接跳转到感兴趣的内容，而我当然是从头到尾梳理。</em></p>
 <p>那么我们下面就直接开始了！</p>
-<h2 id="数据库原理"><a href="#数据库原理" class="headerlink" title="数据库原理"></a>数据库原理</h2><h2 id="数据库结构设计"><a href="#数据库结构设计" class="headerlink" title="数据库结构设计"></a>数据库结构设计</h2><h2 id="表记录操作"><a href="#表记录操作" class="headerlink" title="表记录操作"></a>表记录操作</h2><h2 id="事务管理"><a href="#事务管理" class="headerlink" title="事务管理"></a>事务管理</h2><h2 id="存储过程和存储函数"><a href="#存储过程和存储函数" class="headerlink" title="存储过程和存储函数"></a>存储过程和存储函数</h2><h2 id="触发器和事件"><a href="#触发器和事件" class="headerlink" title="触发器和事件"></a>触发器和事件</h2><h2 id="用户权限管理"><a href="#用户权限管理" class="headerlink" title="用户权限管理"></a>用户权限管理</h2><p>由于root用户，或者称为管理员为超级用户，具有对数据库的所有权限，而在实际的应用中，为了提高数据库系统的安全性，不可能让所有的访问者都拥有这样的权限，对数据库内容随意进行修改。因此需要创建多个具有不同权限的用户来进行访问控制和管理。例如，我们经常使用的QQ中，群主具有对群的所有权限，管理员具有部分权限，而一般的群友的权限就比较少了。</p>
+<h2 id="数据库原理"><a href="#数据库原理" class="headerlink" title="数据库原理"></a>数据库原理</h2><p>想要学好数据库，怎么能不了解一些数据库的基本原理呢~是不是和想象的直接开敲有很大的不同呢？当然，你也可以通过目录直接跳转，都随你，不过我不推荐初学者就这样做。</p>
+<p>那么接下来，就还请留在这里的小伙伴，跟我一起来学习或者说是复习一下数据库的基本模型。</p>
+<h3 id="数据库系统"><a href="#数据库系统" class="headerlink" title="数据库系统"></a>数据库系统</h3><p>数据库系统一般由数据库（DB）、数据库管理系统（DBMS）、应用系统、数据库管理员（DBA）和用户构成，其中DBMS是数据库的基础和核心。下图可用于简单理解数据库系统的架构。</p>
+<p><img src="/MySQL.assets/DB_structure.png" srcset="/img/loading.gif" lazyload alt="DB structure"></p>
+<p>数据库管理系统是数据库系统的核心组成，主要完成数据库的操作与管理功能，实现数据库对象的创建，数据库存储数据的查询、添加、修改与删除的操作，以及数据库的用户管理、权限管理等。这些具体的功能实现我们在之后都会讲到。</p>
+<p>至于数据库，可以简单理解为数据的仓库。更精确一点的定义为，是按照数据结构来组织、存储和管理数据的仓库，是一个可长期存储在计算机内的有组织、可共享、统一管理的大量数据的集合。</p>
+<p>接着，我们就来讲讲都有哪些数据结构。</p>
+<h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><h2 id="数据库结构设计"><a href="#数据库结构设计" class="headerlink" title="数据库结构设计"></a>数据库结构设计</h2><h2 id="表记录操作"><a href="#表记录操作" class="headerlink" title="表记录操作"></a>表记录操作</h2><h2 id="事务管理"><a href="#事务管理" class="headerlink" title="事务管理"></a>事务管理</h2><h2 id="存储过程和存储函数"><a href="#存储过程和存储函数" class="headerlink" title="存储过程和存储函数"></a>存储过程和存储函数</h2><h2 id="触发器和事件"><a href="#触发器和事件" class="headerlink" title="触发器和事件"></a>触发器和事件</h2><h2 id="用户权限管理"><a href="#用户权限管理" class="headerlink" title="用户权限管理"></a>用户权限管理</h2><p>由于root用户，或者称为管理员为超级用户，具有对数据库的所有权限，而在实际的应用中，为了提高数据库系统的安全性，不可能让所有的访问者都拥有这样的权限，对数据库内容随意进行修改。因此需要创建多个具有不同权限的用户来进行访问控制和管理。例如，我们经常使用的QQ中，群主具有对群的所有权限，管理员具有部分权限，而一般的群友的权限就比较少了。</p>
 <p>我们的用户权限管理也是这样的。</p>
 <h3 id="用户管理操作"><a href="#用户管理操作" class="headerlink" title="用户管理操作"></a>用户管理操作</h3><h4 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h4><p>要管理用户，首先我们得有用户，在MySQL中，我们通过以下命令来新建一个用户：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">USER</span> 用户名@主机名 [IDENTIFIED <span class="hljs-keyword">BY</span> [PASSWORD] 密码], …<br></code></pre></td></tr></table></figure>
@@ -335,7 +344,7 @@
 
 <p>第一种格式用于撤销指定的权限，而第二种格式会直接撤销该用户所有的权限（包括 WITH 子句中的授权）。</p>
 <h3 id="通过角色进行权限管理"><a href="#通过角色进行权限管理" class="headerlink" title="通过角色进行权限管理"></a>通过角色进行权限管理</h3><p>那么我们现在就已经熟悉了基本的用户管理操作了，也已经学会了从创建用户到销毁用户的全流程（bushi）。自然而然地就会产生一种疑问，当我需要对大量的用户进行批量授权时，难道只能一个接一个把权限给他们吗？</p>
-<p>答案当然是，不是这样的。MySQL中提供了通过标签化的方式来授予权限，不过在这里被称为 <strong>角色(role)</strong> 。</p>
+<p>答案当然是，不是这样的。MySQL中提供了通过标签化的方式来授予权限，不过在这里被称为**角色(role)**。</p>
 <p>角色是一组权限的集合，将角色赋予某个用户，那么该用户就具有该角色对应的权限。</p>
 <p>常用的创建角色和分配权限的语句如下</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">DROP</span> ROLE IF <span class="hljs-keyword">EXISTS</span> 角色名       ## 删除角色<br><span class="hljs-keyword">CREATE</span> ROLE 角色名, ...          ## 创建角色<br><span class="hljs-keyword">GRANT</span> 权限名 <span class="hljs-keyword">ON</span> <span class="hljs-operator">*</span>.<span class="hljs-operator">*</span> <span class="hljs-keyword">TO</span> 角色名     ## 为角色分配权限<br><span class="hljs-keyword">GRANT</span> 角色名 <span class="hljs-keyword">ON</span> <span class="hljs-operator">*</span>.<span class="hljs-operator">*</span> <span class="hljs-keyword">TO</span> 用户      ## 为某个用户赋予角色的权限<br># 启用角色。注意，设置角色后如果不启用，用户将仍旧得不到授权<br><span class="hljs-keyword">SET</span> <span class="hljs-keyword">DEFAULT</span> ROLE <span class="hljs-keyword">TO</span> 用户<br><span class="hljs-keyword">SET</span> <span class="hljs-keyword">DEFAULT</span> ROLE <span class="hljs-keyword">ALL</span> <span class="hljs-keyword">TO</span> 用户     ## 当一个用户具有多个角色时使用<br># 撤销角色权限，注意是角色权限哦<br><span class="hljs-keyword">REVOKE</span> ... <span class="hljs-keyword">ON</span> <span class="hljs-operator">*</span>.<span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> 角色名<br></code></pre></td></tr></table></figure>
