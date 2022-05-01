@@ -16,19 +16,19 @@
   <meta name="author" content="Fish">
   <meta name="keywords" content="">
   
-    <meta name="description" content="STATUS: INCOMPLETE一直都有想过给数据库的学习做一点点总结，写一点什么，比如简单语句指南或者称之为使用手册也未尝不可的东西。正好最近数据库课程结课，在为期末做准备了，也似乎就有了那么一些理由来坚持写一点什么，斗胆也把我在学习数据库过程中的一些心得体会，以及总结的算是框架的东西，来和大家分享一下。  提前声明一下 使用教材为：《MySQL实用教材（第4版）》 在我看来这本书其实还不错">
+    <meta name="description" content="STATUS: INCOMPLETE最近数据库正好要结课了，我就趁着这个机会，斗胆向大家分享下我的所学所感，希望能有所帮助。  提前声明 使用教材的为《MySQL实用教材（第4版）》 在我看来这本书其实还不错，起码作为一本入门的书，还是值得一读的。 另外，我会用大写字母来队语法进行讲解，用小写字母书写示例内容，还请注意！  我会按照顺序队主要内容进行梳理，假如你有需要的话，可以通过右边的目录直接跳">
 <meta property="og:type" content="article">
 <meta property="og:title" content="A Simple Introduction to MySQL">
 <meta property="og:url" content="http://fish151.cc/2022/04/27/mysql/MySQL/index.html">
 <meta property="og:site_name" content="CCFish">
-<meta property="og:description" content="STATUS: INCOMPLETE一直都有想过给数据库的学习做一点点总结，写一点什么，比如简单语句指南或者称之为使用手册也未尝不可的东西。正好最近数据库课程结课，在为期末做准备了，也似乎就有了那么一些理由来坚持写一点什么，斗胆也把我在学习数据库过程中的一些心得体会，以及总结的算是框架的东西，来和大家分享一下。  提前声明一下 使用教材为：《MySQL实用教材（第4版）》 在我看来这本书其实还不错">
+<meta property="og:description" content="STATUS: INCOMPLETE最近数据库正好要结课了，我就趁着这个机会，斗胆向大家分享下我的所学所感，希望能有所帮助。  提前声明 使用教材的为《MySQL实用教材（第4版）》 在我看来这本书其实还不错，起码作为一本入门的书，还是值得一读的。 另外，我会用大写字母来队语法进行讲解，用小写字母书写示例内容，还请注意！  我会按照顺序队主要内容进行梳理，假如你有需要的话，可以通过右边的目录直接跳">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://fish151.cc/MySQL.assets/DB_structure.png">
+<meta property="og:image" content="http://fish151.cc/DB_structure.png">
 <meta property="article:published_time" content="2022-04-27T03:00:00.000Z">
-<meta property="article:modified_time" content="2022-04-28T12:45:51.291Z">
+<meta property="article:modified_time" content="2022-04-30T13:42:37.248Z">
 <meta property="article:author" content="Fish">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://fish151.cc/MySQL.assets/DB_structure.png">
+<meta name="twitter:image" content="http://fish151.cc/DB_structure.png">
   
   
   <title>A Simple Introduction to MySQL - CCFish</title>
@@ -212,7 +212,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.7k 字
+          3.9k 字
         
       </span>
     
@@ -266,30 +266,33 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2 分钟前
+                    本文最后更新于：14 小时前
                   
                 
               </p>
             
             <div class="markdown-body">
               
-              <h1 id="STATUS-INCOMPLETE"><a href="#STATUS-INCOMPLETE" class="headerlink" title="STATUS: INCOMPLETE"></a>STATUS: INCOMPLETE</h1><p>一直都有想过给数据库的学习做一点点总结，写一点什么，比如简单语句指南或者称之为使用手册也未尝不可的东西。正好最近数据库课程结课，在为期末做准备了，也似乎就有了那么一些理由来坚持写一点什么，斗胆也把我在学习数据库过程中的一些心得体会，以及总结的算是框架的东西，来和大家分享一下。</p>
+              <h1 id="STATUS-INCOMPLETE"><a href="#STATUS-INCOMPLETE" class="headerlink" title="STATUS: INCOMPLETE"></a>STATUS: INCOMPLETE</h1><p>最近数据库正好要结课了，我就趁着这个机会，斗胆向大家分享下我的所学所感，希望能有所帮助。</p>
 <blockquote>
-<p>提前声明一下</p>
-<p>使用教材为：《MySQL实用教材（第4版）》</p>
+<p>提前声明</p>
+<p>使用教材的为《MySQL实用教材（第4版）》</p>
 <p>在我看来这本书其实还不错，起码作为一本入门的书，还是值得一读的。</p>
-<p>另外，所有大写的代码表明仅为语法讲解，小写代码为示例，请注意！</p>
+<p>另外，我会用大写字母来队语法进行讲解，用小写字母书写示例内容，还请注意！</p>
 </blockquote>
-<p><em>你可以从右边的目录直接跳转到感兴趣的内容，而我当然是从头到尾梳理。</em></p>
-<p>那么我们下面就直接开始了！</p>
-<h2 id="数据库原理"><a href="#数据库原理" class="headerlink" title="数据库原理"></a>数据库原理</h2><p>想要学好数据库，怎么能不了解一些数据库的基本原理呢~是不是和想象的直接开敲有很大的不同呢？当然，你也可以通过目录直接跳转，都随你，不过我不推荐初学者就这样做。</p>
-<p>那么接下来，就还请留在这里的小伙伴，跟我一起来学习或者说是复习一下数据库的基本模型。</p>
+<p><em>我会按照顺序队主要内容进行梳理，假如你有需要的话，可以通过右边的目录直接跳转到相应位置。</em></p>
+<p>那么我们下面就开始了！</p>
+<h2 id="数据库原理"><a href="#数据库原理" class="headerlink" title="数据库原理"></a>数据库原理</h2><p>最开始接触数据库，当然要从最基本的原理入手。了解数据库的底层架构，能对具体的语法以及数据库的功能产生更深层次的理解。更直白的说，会清楚地了解到自己正在做什么。</p>
+<p>那么还留在这里的小伙伴，就跟我一起来学习一下数据库的基本架构和数据模型吧。</p>
 <h3 id="数据库系统"><a href="#数据库系统" class="headerlink" title="数据库系统"></a>数据库系统</h3><p>数据库系统一般由数据库（DB）、数据库管理系统（DBMS）、应用系统、数据库管理员（DBA）和用户构成，其中DBMS是数据库的基础和核心。下图可用于简单理解数据库系统的架构。</p>
-<p><img src="/MySQL.assets/DB_structure.png" srcset="/img/loading.gif" lazyload alt="DB structure"></p>
-<p>数据库管理系统是数据库系统的核心组成，主要完成数据库的操作与管理功能，实现数据库对象的创建，数据库存储数据的查询、添加、修改与删除的操作，以及数据库的用户管理、权限管理等。这些具体的功能实现我们在之后都会讲到。</p>
+<p><img src="/DB_structure.png" srcset="/img/loading.gif" lazyload alt="DB structure"></p>
+<p>数据库管理系统（DBMS）是数据库系统的核心组成，主要完成数据库的操作与管理功能，实现数据库对象的创建，数据库存储数据的查询、添加、修改与删除的操作，以及数据库的用户管理、权限管理等。这些具体的功能实现我们在之后也都会讲到。</p>
 <p>至于数据库，可以简单理解为数据的仓库。更精确一点的定义为，是按照数据结构来组织、存储和管理数据的仓库，是一个可长期存储在计算机内的有组织、可共享、统一管理的大量数据的集合。</p>
-<p>接着，我们就来讲讲都有哪些数据结构。</p>
-<h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><h2 id="数据库结构设计"><a href="#数据库结构设计" class="headerlink" title="数据库结构设计"></a>数据库结构设计</h2><h2 id="表记录操作"><a href="#表记录操作" class="headerlink" title="表记录操作"></a>表记录操作</h2><h2 id="事务管理"><a href="#事务管理" class="headerlink" title="事务管理"></a>事务管理</h2><h2 id="存储过程和存储函数"><a href="#存储过程和存储函数" class="headerlink" title="存储过程和存储函数"></a>存储过程和存储函数</h2><h2 id="触发器和事件"><a href="#触发器和事件" class="headerlink" title="触发器和事件"></a>触发器和事件</h2><h2 id="用户权限管理"><a href="#用户权限管理" class="headerlink" title="用户权限管理"></a>用户权限管理</h2><p>由于root用户，或者称为管理员为超级用户，具有对数据库的所有权限，而在实际的应用中，为了提高数据库系统的安全性，不可能让所有的访问者都拥有这样的权限，对数据库内容随意进行修改。因此需要创建多个具有不同权限的用户来进行访问控制和管理。例如，我们经常使用的QQ中，群主具有对群的所有权限，管理员具有部分权限，而一般的群友的权限就比较少了。</p>
+<p>接着，我们就来讲讲都有哪些数据模型。</p>
+<h3 id="数据模型"><a href="#数据模型" class="headerlink" title="数据模型"></a>数据模型</h3><p>数据库发展过程中产生过三种基本的数据模型，他们是层次模型、网状模型和关系模型。目前比较流行的数据模型就是关系模型，我们接下来学习的MySQL中使用的，也是关系模型。</p>
+<p>关系模型以记录组或者数据表的形式组织数据，以便利用各种实体间与属性之间的关系进行储存和变换，不分层也无指针，是建立空间数据和属性数据之间关系的一种非常有效的数据组织格式。</p>
+<p>数据模型可以按照不同的应用层次分为三种类型：概念模型、逻辑模型、物理模型。</p>
+<h2 id="数据库结构设计"><a href="#数据库结构设计" class="headerlink" title="数据库结构设计"></a>数据库结构设计</h2><h2 id="表记录操作"><a href="#表记录操作" class="headerlink" title="表记录操作"></a>表记录操作</h2><h2 id="事务管理"><a href="#事务管理" class="headerlink" title="事务管理"></a>事务管理</h2><h2 id="存储过程和存储函数"><a href="#存储过程和存储函数" class="headerlink" title="存储过程和存储函数"></a>存储过程和存储函数</h2><h2 id="触发器和事件"><a href="#触发器和事件" class="headerlink" title="触发器和事件"></a>触发器和事件</h2><h2 id="用户权限管理"><a href="#用户权限管理" class="headerlink" title="用户权限管理"></a>用户权限管理</h2><p>由于root用户，或者称为管理员为超级用户，具有对数据库的所有权限，而在实际的应用中，为了提高数据库系统的安全性，不可能让所有的访问者都拥有这样的权限，对数据库内容随意进行修改。因此需要创建多个具有不同权限的用户来进行访问控制和管理。例如，我们经常使用的QQ中，群主具有对群的所有权限，管理员具有部分权限，而一般的群友的权限就比较少了。</p>
 <p>我们的用户权限管理也是这样的。</p>
 <h3 id="用户管理操作"><a href="#用户管理操作" class="headerlink" title="用户管理操作"></a>用户管理操作</h3><h4 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h4><p>要管理用户，首先我们得有用户，在MySQL中，我们通过以下命令来新建一个用户：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">USER</span> 用户名@主机名 [IDENTIFIED <span class="hljs-keyword">BY</span> [PASSWORD] 密码], …<br></code></pre></td></tr></table></figure>
